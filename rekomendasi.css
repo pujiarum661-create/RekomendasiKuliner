@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --pink-utama : #e91e8c;
+  --pink-gelap : #6d0042;
+  --pink-muda  : #fce7f3;
+  --pink-soft  : #ffd6e7;
+  --putih      : #ffffff;
+  --teks-gelap : #3b0a28;
+  --teks-abu   : #7e3560;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito', sans-serif; background-color: #fff0f5; color: var(--teks-gelap); }
+
+
+
+.navbar {
+  background: var(--putih) !important;
+  border-bottom: 2px solid var(--pink-soft);
+  padding: 0.9rem 0;
+}
+.navbar-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--pink-utama) !important;
+  text-decoration: none;
+}
+.navbar-brand span { color: var(--pink-gelap); }
+.nav-link { color: var(--teks-abu) !important; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
+.nav-link:hover, .nav-link.aktif { color: var(--pink-utama) !important; font-weight: 800; }
+
+
+
+
+.header-halaman {
+  background: linear-gradient(135deg, #6d0042, #9c1060, #b5156c);
+  padding: 3.5rem 2rem;
+  color: var(--putih);
+}
+.label-kecil { font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: #f472b6; font-weight: 700; margin-bottom: 0.5rem; }
+.header-halaman h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
+.header-halaman h1 em { color: #f472b6; font-style: italic; }
+.header-halaman p { color: rgba(255,214,231,0.8); }
+
+.input-cari {
+  border-radius: 50px !important;
+  padding: 0.85rem 1.5rem !important;
+  border: 2px solid rgba(255,255,255,0.3) !important;
+  background: rgba(255,255,255,0.15) !important;
+  color: var(--putih) !important;
+  font-size: 0.95rem;
+}
+.input-cari::placeholder { color: rgba(255,255,255,0.6); }
+.input-cari:focus { border-color: rgba(255,255,255,0.7) !important; background: rgba(255,255,255,0.22) !important; box-shadow: none !important; }
+
+
+
+
+.strip-filter {
+  background: var(--putih);
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--pink-soft);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.strip-filter::-webkit-scrollbar { display: none; }
+
+.tombol-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fce7f3;
+  border: 1.5px solid var(--pink-soft);
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--teks-abu);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Nunito', sans-serif;
+}
+.tombol-filter.aktif,
+.tombol-filter:hover {
+  background: linear-gradient(135deg, var(--pink-utama), var(--pink-gelap));
+  border-color: transparent;
+  color: var(--putih);
+  transform: translateY(-1px);
+}
+
+
+.seksi-kartu { padding: 3rem 0 5rem; }
+
+
+
+.kartu {
+  background: var(--putih);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid var(--pink-soft);
+  box-shadow: 0 4px 20px rgba(109,0,66,0.08);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+.kartu:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(233,30,140,0.18);
+}
+
+
+.kartu-gambar {
+  height: 175px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fce7f3, #ffd6e7); 
+}
+
+.kartu-gambar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+
+.kartu:hover .kartu-gambar img {
+  transform: scale(1.06);
+}
+
+
+.kartu-gambar.gambar-fallback::after {
+  content: "🍽️";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.kartu-badge {
+  position: absolute;
+  top: 10px; left: 10px;
+  border-radius: 50px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--putih);
+  z-index: 2;
+}
+.badge-hot  { background: linear-gradient(135deg, #e91e8c, #b5156c); }
+.badge-baru { background: linear-gradient(135deg, #10b981, #059669); }
+.badge-top  { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+
+
+.kartu-isi { padding: 1.2rem 1.3rem 1.5rem; }
+.kartu-kategori-label { font-size: 0.68rem; color: var(--pink-utama); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.3rem; }
+.kartu-nama { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--pink-gelap); margin-bottom: 0.35rem; }
+.kartu-lokasi { font-size: 0.8rem; color: #c084a8; margin-bottom: 0.75rem; }
+.kartu-bawah { display: flex; justify-content: space-between; align-items: center; }
+.kartu-rating { font-size: 0.85rem; font-weight: 700; color: var(--teks-gelap); }
+.kartu-rating .bintang { color: var(--pink-utama); }
+.kartu-harga { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; color: var(--pink-utama); }
+
+
+.kartu-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.7rem; }
+.tag { background: #fce7f3; border: 1px solid var(--pink-soft); border-radius: 50px; padding: 0.15rem 0.65rem; font-size: 0.68rem; color: var(--teks-abu); font-weight: 600; }
+
+
+
+footer { background: var(--pink-gelap); color: rgba(255,214,231,0.65); padding: 3.5rem 0 1.5rem; }
+.footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 700; color: #fff0f5; margin-bottom: 0.5rem; }
+.footer-brand span { color: #f472b6; }
+footer p  { font-size: 0.85rem; line-height: 1.75; }
+footer h5 { color: #fff0f5; font-size: 0.82rem; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 1rem; }
+footer ul { list-style: none; padding: 0; }
+footer ul li { margin-bottom: 0.5rem; }
+footer ul a  { color: rgba(255,214,231,0.55); font-size: 0.88rem; text-decoration: none; transition: color 0.3s; }
+footer ul a:hover { color: #f472b6; }
+footer hr { border-color: rgba(255,255,255,0.08); }
+.footer-bawah { text-align: center; font-size: 0.78rem; color: rgba(255,214,231,0.3); } 

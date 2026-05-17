@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Nunito:wght@400;600;700;800&display=swap');
+
+/* --- VARIABEL WARNA --- */
+:root {
+  --pink-utama : #e91e8c;
+  --pink-gelap : #6d0042;
+  --pink-soft  : #ffd6e7;
+  --putih      : #ffffff;
+  --teks-gelap : #3b0a28;
+  --teks-abu   : #7e3560;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito', sans-serif; background-color: #fff0f5; color: var(--teks-gelap); }
+
+
+
+
+.navbar {
+  background: var(--putih) !important;        
+  border-bottom: 2px solid var(--pink-soft); 
+  padding: 0.9rem 0;
+}
+
+.navbar-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--pink-utama) !important;   
+  text-decoration: none;
+}
+.navbar-brand span { color: var(--pink-gelap); } 
+
+.nav-link {
+  color: var(--teks-abu) !important;    
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+.nav-link:hover        { color: var(--pink-utama) !important; }
+.nav-link.aktif        { color: var(--pink-utama) !important; font-weight: 800; }
+
+
+
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
+              url('bennerkuliner.jpg')
+              no-repeat center center;
+  background-size: cover;
+  min-height: 92vh;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.hero-isi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-badge {
+  background: var(--putih);
+  color: var(--pink-utama);
+  border: 2px solid var(--pink-utama);
+  border-radius: 50px;
+  padding: 0.4rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: var(--putih);
+  line-height: 1.15;
+  font-weight: 700;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+.hero h1 em { color: #ff60b5; font-style: italic; }
+
+.hero p { color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 520px; }
+
+.tombol-utama {
+  background: linear-gradient(135deg, var(--pink-utama), var(--pink-gelap));
+  color: var(--putih);
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 0.9rem 2.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 8px 25px rgba(233,30,140,0.5);
+  transition: transform 0.3s;
+}
+.tombol-utama:hover { transform: translateY(-3px); color: var(--putih); }
+
+
+
+
+.label-kecil {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--pink-utama);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.judul-section {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+.text-desc { color: var(--teks-abu); font-size: 0.95rem; }
+
+
+
+
+.rekomendasi {
+  background: linear-gradient(135deg, #6d0042, #861a57, #b5156c);
+  padding: 5rem 0;
+}
+.rekomendasi .label-kecil  { color: #f472b6; }
+.rekomendasi .judul-section { color: #fff0f5; }
+.rekomendasi .text-desc     { color: rgba(255,214,231,0.7); }
+
+.kartu-makanan {
+  background: rgba(255,255,255,0.09);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s;
+}
+.kartu-makanan:hover { transform: translateY(-6px); }
+.kartu-makanan::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f472b6, #fb7185, transparent);
+  border-radius: 20px 20px 0 0;
+}
+.kartu-nomor {
+  position: absolute; top: 0.8rem; right: 1.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem; color: rgba(255,255,255,0.05);
+  font-weight: 700; line-height: 1;
+}
+.kartu-emoji { font-size: 3.5rem; margin-bottom: 1rem; }
+.kartu-makanan h3 { font-family: 'Cormorant Garamond', serif; color: #fff0f5; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; }
+.kartu-makanan p  { color: rgba(255,214,231,0.7); font-size: 0.87rem; line-height: 1.7; margin-bottom: 1.3rem; }
+.kartu-info { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.kartu-info .label { display: block; font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,214,231,0.45); margin-bottom: 0.2rem; }
+.kartu-info .nilai { display: block; color: #f472b6; font-weight: 700; font-size: 0.9rem; }
+
+
+
+
+.kategori-rasa {
+  background: var(--putih);
+  padding: 5rem 0;
+  border-top: 4px solid var(--pink-utama);
+}
+.kartu-kategori {
+  background: #fff0f5;
+  border: 1.5px solid var(--pink-soft);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.kartu-kategori:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(233,30,140,0.15); background: #fce7f3; }
+.kartu-kategori h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; color: var(--pink-gelap); margin-bottom: 0.7rem; }
+.kartu-kategori p  { font-size: 0.87rem; color: var(--teks-abu); line-height: 1.75; }
+
+
+
+
+.newsletter {
+  background: linear-gradient(135deg, var(--pink-utama), var(--pink-gelap));
+  padding: 4.5rem 0;
+}
+.newsletter h2 { font-family: 'Cormorant Garamond', serif; color: var(--putih); font-size: clamp(1.8rem,4vw,2.5rem); font-weight: 700; margin-bottom: 0.8rem; }
+.newsletter p  { color: rgba(255,255,255,0.85); }
+.newsletter .form-control { border-radius: 50px 0 0 50px; padding: 0.8rem 1.5rem; border: none; }
+.newsletter .btn-dark { border-radius: 0 50px 50px 0; padding: 0.8rem 1.8rem; font-weight: 700; background-color: var(--pink-gelap); border-color: var(--pink-gelap); }
+.newsletter .btn-dark:hover { background-color: #4a0030; }
+
+
+
+
+footer { background: var(--pink-gelap); color: rgba(255,214,231,0.65); padding: 3.5rem 0 1.5rem; }
+.footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 700; color: #fff0f5; margin-bottom: 0.5rem; }
+.footer-brand span { color: #f472b6; }
+footer p  { font-size: 0.85rem; line-height: 1.75; }
+footer h5 { color: #fff0f5; font-size: 0.82rem; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 1rem; }
+footer ul { list-style: none; padding: 0; }
+footer ul li { margin-bottom: 0.5rem; }
+footer ul a  { color: rgba(255,214,231,0.55); font-size: 0.88rem; text-decoration: none; transition: color 0.3s; }
+footer ul a:hover { color: #f472b6; }
+footer hr { border-color: rgba(255,255,255,0.08); }
+.footer-bawah { text-align: center; font-size: 0.78rem; color: rgba(255,214,231,0.3); }

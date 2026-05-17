@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Nunito:wght@400;600;700;800&display=swap');
+:root{--pink-utama:#e91e8c;--pink-gelap:#6d0042;--pink-soft:#ffd6e7;--putih:#ffffff;--teks-abu:#7e3560;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;background:#fff0f5;color:#3b0a28;}
+
+.navbar{background:var(--putih)!important;border-bottom:2px solid var(--pink-soft);padding:.9rem 0;}
+.navbar-brand{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:var(--pink-utama)!important;text-decoration:none;}
+.navbar-brand span{color:var(--pink-gelap);}
+.nav-link{color:var(--teks-abu)!important;font-weight:600;font-size:.9rem;}
+.nav-link:hover,.nav-link.aktif{color:var(--pink-utama)!important;font-weight:800;}
+
+.header-halaman{background:linear-gradient(135deg,#6d0042,#9c1060,#b5156c);padding:3.5rem 2rem;color:#fff;text-align:center;}
+.label-kecil{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:#f472b6;font-weight:700;margin-bottom:.5rem;}
+.header-halaman h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.2;margin-bottom:1rem;}
+.header-halaman h1 em{color:#f472b6;font-style:italic;}
+.header-halaman p{color:rgba(255,214,231,.8);}
+
+.seksi-ikon{background:var(--putih);padding:2.5rem 0;}
+.kotak-ikon{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:16px;padding:1.8rem 1rem;text-align:center;text-decoration:none;cursor:pointer;transition:transform .3s;min-height:130px;font-size:2.2rem;}
+.kotak-ikon:hover{transform:translateY(-6px);}
+.kotak-ikon div{font-size:.82rem;font-weight:700;color:#fff;margin-top:.5rem;}
+.kotak-ikon small{font-size:.68rem;color:rgba(255,255,255,.7);}
+.merah-muda{background:linear-gradient(135deg,#e91e8c,#9c1060);}
+.oranye{background:linear-gradient(135deg,#f59e0b,#d97706);}
+.biru{background:linear-gradient(135deg,#3b82f6,#1d4ed8);}
+.ungu{background:linear-gradient(135deg,#8b5cf6,#6d28d9);}
+.merah{background:linear-gradient(135deg,#ef4444,#b91c1c);}
+.hijau{background:linear-gradient(135deg,#10b981,#059669);}
+
+.seksi-makanan{padding:3rem 0;border-top:3px solid var(--pink-soft);}
+.seksi-makanan.bg-putih{background:var(--putih);}
+.judul-seksi{display:flex;align-items:center;gap:.8rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.judul-seksi span:first-child{font-size:2rem;}
+.judul-seksi h2{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--pink-gelap);margin:0;}
+.badge-jumlah{background:#fce7f3;color:var(--pink-utama);border:1px solid var(--pink-soft);border-radius:50px;padding:.2rem .8rem;font-size:.75rem;font-weight:700;}
+.link-semua{margin-left:auto;color:var(--pink-utama);font-size:.85rem;font-weight:700;text-decoration:none;border:1.5px solid var(--pink-soft);border-radius:50px;padding:.3rem 1rem;transition:all .3s;}
+.link-semua:hover{background:var(--pink-utama);color:#fff;}
+
+
+.kartu-kecil{background:var(--putih);border-radius:16px;overflow:hidden;border:1.5px solid var(--pink-soft);cursor:pointer;transition:transform .3s;}
+.kartu-kecil:hover{transform:translateY(-5px);}
+.kk-foto{height:130px;overflow:hidden;background:#fce7f3;}
+.kk-foto img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.kartu-kecil:hover .kk-foto img{transform:scale(1.07);}
+.kk-isi{padding:.9rem;}
+.kk-nama{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:700;color:var(--pink-gelap);margin-bottom:.3rem;}
+.kk-lokasi{font-size:.72rem;color:#c084a8;margin-bottom:.5rem;}
+.kk-bawah{display:flex;justify-content:space-between;}
+.kk-rating{font-size:.8rem;font-weight:700;color:var(--pink-utama);}
+.kk-harga{font-size:.8rem;font-weight:700;color:var(--teks-abu);}
+
+.seksi-kota{background:linear-gradient(135deg,#6d0042,#9c1060);padding:4rem 0;}
+.kotak-kota{display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:1.5rem 1rem;text-align:center;text-decoration:none;font-size:1.8rem;transition:all .3s;cursor:pointer;}
+.kotak-kota div{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:#fff0f5;margin-top:.4rem;}
+.kotak-kota small{font-size:.7rem;color:rgba(255,214,231,.6);}
+.kotak-kota:hover{background:rgba(255,255,255,.18);transform:translateY(-4px);}
+
+footer{background:var(--pink-gelap);color:rgba(255,214,231,.65);padding:3.5rem 0 1.5rem;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:#fff0f5;margin-bottom:.5rem;}
+.footer-brand span{color:#f472b6;}
+footer p{font-size:.85rem;line-height:1.75;}
+footer h5{color:#fff0f5;font-size:.82rem;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:1rem;}
+footer ul{list-style:none;padding:0;}footer ul li{margin-bottom:.5rem;}
+footer ul a{color:rgba(255,214,231,.55);font-size:.88rem;text-decoration:none;transition:color .3s;}
+footer ul a:hover{color:#f472b6;}
+footer hr{border-color:rgba(255,255,255,.08);}
+.footer-bawah{text-align:center;font-size:.78rem;color:rgba(255,214,231,.3);}

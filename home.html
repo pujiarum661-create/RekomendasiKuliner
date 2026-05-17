@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SavorySpot - Rekomendasi Kuliner</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR — pakai Bootstrap-->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="home.html">SAVORY<span>SPOT</span></a>
+
+      <!-- Tombol hamburger, muncul di layar HP -->
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu navigasi, collapse = bisa disembunyikan di HP -->
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link aktif" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="rekomendasi.html">Rekomendasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="kategori.html">Kategori</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO / BANNER UTAMA-->
+  <section class="hero">
+    <div class="container text-center">
+      <div class="hero-isi">
+        <span class="hero-badge">🍜 Culinary Exploration</span>
+        <h1>Temukan <em>Surga</em><br>Rasa Di Sekitarmu</h1>
+        <p>Jelajahi rekomendasi kuliner pilihan dari Sabang sampai Merauke.</p>
+        <a href="#rekomendasi" class="tombol-utama">Jelajahi Sekarang →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REKOMENDASI KULINER LEGENDARIS -->
+  <section class="rekomendasi" id="rekomendasi">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <p class="label-kecil">REKOMENDASI</p>
+        <h2 class="judul-section">Kuliner <em>Legendaris</em><br>Yang Tak Tergantikan</h2>
+        <p class="text-desc">Jelajahi kuliner terbaik versi website kami, dijamin autentik dan bikin rindu.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="kartu-makanan h-100">
+            <div class="kartu-nomor">01</div>
+            <div class="kartu-emoji">🍜</div>
+            <h3>Rawon Setan Surabaya</h3>
+            <p>Sup daging hitam ikonik dengan keluak pilihan, disajikan panas mengepul bersama tauge segar dan sambal udang khas Surabaya.</p>
+            <div class="kartu-info">
+              <div><span class="label">Rating</span><span class="nilai">⭐ 4.95</span></div>
+              <div><span class="label">Harga</span><span class="nilai">Rp 20.000</span></div>
+              <div><span class="label">Jam Buka</span><span class="nilai">10:00–23:00</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="kartu-makanan h-100">
+            <div class="kartu-nomor">02</div>
+            <div class="kartu-emoji">🥩</div>
+            <h3>Sate Madura Pak Arif</h3>
+            <p>Sate ayam dan kambing dengan bumbu kacang pekat yang gurih, dibakar sempurna di atas arang batok kelapa tradisional.</p>
+            <div class="kartu-info">
+              <div><span class="label">Rating</span><span class="nilai">⭐ 4.87</span></div>
+              <div><span class="label">Harga</span><span class="nilai">Rp 15.000</span></div>
+              <div><span class="label">Jam Buka</span><span class="nilai">11:00–22:00</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="kartu-makanan h-100">
+            <div class="kartu-nomor">03</div>
+            <div class="kartu-emoji">🍦</div>
+            <h3>Es Campur Pak Kumis</h3>
+            <p>Segar dan penuh warna — kolang-kaling, agar-agar, mutiara, dan es serut disiram santan kelapa dan sirup gula merah.</p>
+            <div class="kartu-info">
+              <div><span class="label">Rating</span><span class="nilai">⭐ 4.92</span></div>
+              <div><span class="label">Harga</span><span class="nilai">Rp 11.000</span></div>
+              <div><span class="label">Jam Buka</span><span class="nilai">09:00–18:00</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KATEGORI RASA -->
+  <section class="kategori-rasa">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="label-kecil">Explore Categories</p>
+        <h2 class="judul-section">Mau Makan Apa Hari Ini?</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6"><div class="kartu-kategori h-100"><h3>🍮 Si Manis Legendaris</h3><p>Rasa manisnya lembut dan bikin nostalgia. Cocok untuk pencinta dessert tradisional yang selalu bikin nagih.</p></div></div>
+        <div class="col-lg-3 col-md-6"><div class="kartu-kategori h-100"><h3>🍲 Gurih dan Berkuah</h3><p>Kuah hangat dengan rasa gurih yang meresap membuat setiap suapan memanjakan lidah. Nikmat saat masih panas.</p></div></div>
+        <div class="col-lg-3 col-md-6"><div class="kartu-kategori h-100"><h3>🔥 Bakar dan Panggang</h3><p>Aroma asap dari bakaran dipadukan bumbu meresap menciptakan rasa smoky, gurih, dan menggoda selera.</p></div></div>
+        <div class="col-lg-3 col-md-6"><div class="kartu-kategori h-100"><h3>🌶️ Pencinta Pedas</h3><p>Perpaduan cabai, rempah, dan sambal khas menghadirkan sensasi pedas yang nampol tapi bikin ketagihan.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container text-center">
+      <h2>Jangan Sampai Kelewatan<br>Rekomendasi Terbaru 🌸</h2>
+      <p>Daftar sekarang dan dapatkan kurasi kuliner mingguan langsung di akun kamu.</p>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+          <div class="input-group">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Masukkan email kamu..."/>
+            <button class="btn btn-dark" onclick="daftarNewsletter()">Langganan Gratis</button>
+          </div>
+          <p id="pesanSukses" style="display:none; color:white; margin-top:1rem;">
+            ✅ Berhasil didaftarkan! Terima kasih 🌸
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER-->
+  <footer>
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">SAVORY<span>SPOT</span></div>
+          <p>Rekomendasi tempat kuliner terbaik. Kami bantu kamu menemukan pengalaman makan terbaik di mana pun kamu berada.</p>
+        </div>
+        <div class="col-lg-2 col-6"><h5>Kategori</h5><ul><li><a href="#">Masakan Indonesia</a></li><li><a href="#">Jajanan Pasar</a></li><li><a href="#">Dessert</a></li></ul></div>
+        <div class="col-lg-2 col-6"><h5>Kota</h5><ul><li><a href="#">Surabaya</a></li><li><a href="#">Jakarta</a></li><li><a href="#">Bandung</a></li></ul></div>
+        <div class="col-lg-2 col-6"><h5>Tentang</h5><ul><li><a href="#">Tentang Kami</a></li><li><a href="#">Blog</a></li><li><a href="kontak.html">Hubungi Kami</a></li></ul></div>
+      </div>
+      <hr/>
+      <p class="footer-bawah">©2026 SAVORYSPOT— Dibuat untuk para pecinta kuliner.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>
