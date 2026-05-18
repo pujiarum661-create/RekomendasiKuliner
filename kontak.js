@@ -1,33 +1,50 @@
-function submitForm() {
-  const name = document.getElementById('fName').value.trim();
-  const email = document.getElementById('fEmail').value.trim();
-  const topic = document.getElementById('fTopic').value;
-  const msg = document.getElementById('fMsg').value.trim();
-  const agree = document.getElementById('fAgree').checked;
-  if (!name || !email || !topic || !msg) { alert('Mohon lengkapi semua field yang wajib diisi! 🌸'); return; }
-  if (!agree) { alert('Mohon setujui Kebijakan Privasi terlebih dahulu.'); return; }
-  const btn = document.querySelector('.btn-send');
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.innerHTML = '<i class="fas fa-check"></i> Terkirim!';
-    btn.style.background = 'linear-gradient(135deg,#10b981,#059669)';
-    const successMsg = document.getElementById('successMsg');
-    successMsg.style.display = 'flex';
-    document.getElementById('fName').value = '';
-    document.getElementById('fEmail').value = '';
-    document.getElementById('fPhone').value = '';
-    document.getElementById('fTopic').value = '';
-    document.getElementById('fMsg').value = '';
-    document.getElementById('fAgree').checked = false;
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Pesan Sekarang';
-      btn.style.background = '';
-      btn.disabled = false;
-      successMsg.style.display = 'none';
+function kirimPesan() {
+  var nama  = document.getElementById('inputNama').value.trim();
+  var email = document.getElementById('inputEmail').value.trim();
+  var topik = document.getElementById('inputTopik').value;
+  var pesan = document.getElementById('inputPesan').value.trim();
+  var setuju = document.getElementById('setuju').checked;
+
+  
+  if (!nama || !email || !topik || !pesan) {
+    alert('Mohon lengkapi semua field yang wajib diisi! 🌸');
+    return;
+  }
+
+  
+  if (!setuju) {
+    alert('Mohon setujui Kebijakan Privasi terlebih dahulu.');
+    return;
+  }
+
+  
+  var tombol = document.querySelector('.tombol-kirim');
+  tombol.innerHTML = '⏳ Mengirim...';
+  tombol.disabled = true;
+
+  
+  setTimeout(function() {
+    tombol.innerHTML = '✅ Terkirim!';
+    tombol.style.background = 'linear-gradient(135deg,#10b981,#059669)';
+
+    var pesanSukses = document.getElementById('pesanSukses');
+    pesanSukses.style.display = 'block';
+
+    
+    document.getElementById('inputNama').value  = '';
+    document.getElementById('inputEmail').value = '';
+    document.getElementById('inputHP').value    = '';
+    document.getElementById('inputTopik').value = '';
+    document.getElementById('inputPesan').value = '';
+    document.getElementById('setuju').checked   = false;
+
+    
+    setTimeout(function() {
+      tombol.innerHTML = '✉️ Kirim Pesan Sekarang';
+      tombol.style.background = '';
+      tombol.disabled = false;
+      pesanSukses.style.display = 'none';
     }, 4000);
+
   }, 1500);
 }
-
-const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
